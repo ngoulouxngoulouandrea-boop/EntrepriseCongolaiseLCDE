@@ -1,11 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Contact | LCDE</title> 
+    <meta name="description" content="Contactez La Congolaise Des Eaux."> 
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Préconnecte au service Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Préconnecte à la source des polices avec CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"> <!-- Import des polices Inter et Poppins -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Import des icônes Font Awesome -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
+
 <body>
-    
+
+<!-- =========================
+HEADER
+========================= -->
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="logo">
+            LC<span>DE</span>
+        </a>
+        <nav>
+            <ul> <!-- Liste des liens du menu -->
+                <li><a href="Accueil.html">Accueil</a></li> <!-- Lien vers l'accueil -->
+                <li><a href="Service.html">Services</a></li> <!-- Lien vers la page services -->
+            </ul>
+        </nav> 
+    </div>
+</header> 
+
+<!-- =========================
+PAGE HERO
+========================= -->
+
+<section class="page-hero">
+    <div class="container"> 
+        <span>Nous contacter</span> 
+        <h1>Contactez la LCDE</h1> 
+        <p> 
+            Une question, une demande de branchement ou un besoin
+            d'assistance ? Notre équipe est à votre écoute.
+        </p>
+    </div>
+</section> 
+
+<!-- =========================
+CONTACT
+========================= -->
+<section class="contact section">
+    <div class="container contact-grid">
+
+        <!-- Formulaire -->
+
+        <div class="contact-form"> 
+            <h2>Envoyez-nous un message</h2> 
+            <form>
+                <input type="text" placeholder="Nom complet" required> <!-- Champ obligatoire pour le nom -->
+                <input type="email" placeholder="Adresse e-mail" required> <!-- Champ obligatoire pour l'email -->
+
+                <input type="tel" placeholder="Téléphone"> <!-- Champ facultatif pour le téléphone -->
+                <input type="text" placeholder="Objet"> <!-- Champ facultatif pour l'objet du message -->
+
+                <textarea rows="6" placeholder="Votre message..." required></textarea> <!-- Zone de texte requise pour le message -->
+                <button type="submit" class="btn">Envoyer</button> <!-- Bouton d'envoi du formulaire -->
+            </form> 
+        </div> <
+
+        <!-- Informations -->
+
+        <aside class="contact-info"> <!-- Bloc d'information de contact à droite -->
+            <div class="info-box"> 
+                <i class="fa-solid fa-location-dot"></i> 
+                <h3>Adresse</h3> 
+                <p> <!-- Adresse de l'entreprise -->
+                    Siège social<br>
+                    Brazzaville<br>
+                    République du Congo
+                </p>
+            </div> 
+            <div class="info-box"> 
+                <i class="fa-solid fa-phone"></i> 
+                <h3>Téléphone</h3> 
+                <p> <!-- Numéro de téléphone -->
+                    +242 XX XX XX XX
+                </p>
+            </div> 
+            <div class="info-box"> 
+                <i class="fa-solid fa-envelope"></i> <!-- Icône d'email -->
+                <h3>Email</h3> 
+                <p> 
+                    contact@lcde.cg
+                </p>
+            </div> 
+            <div class="info-box"> 
+                <i class="fa-solid fa-clock"></i> 
+                <h3>Horaires</h3> 
+                <p> <!-- Horaires d'ouverture -->
+                    Lundi - Vendredi<br>
+                    08h00 - 16h30
+                </p>
+            </div> 
+        </aside> 
+    </div> 
+</section>
+
+<!-- =========================
+LOCALISATION
+========================= -->
+<section class="map section">
+    <div class="container"> 
+        <div class="section-title"> 
+            <span>Localisation</span> 
+            <h2>Où nous trouver ?</h2> 
+        </div> 
+        <div class="map-placeholder"> <!-- Placeholder pour la future carte -->
+            <i class="fa-solid fa-map-location-dot"></i> <!-- Icône de localisation -->
+            <h3>Carte Google Maps</h3>
+            <p>
+                Vous pourrez intégrer ici une carte Google Maps
+                ou une image représentant le siège de la LCDE.
+            </p>
+        </div> 
+    </div> 
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer class="footer">
+    <div class="container footer-content"> 
+        <div> 
+            <h3>LCDE</h3> 
+            <p>
+                Fournir une eau potable de qualité
+                au service des citoyens.
+            </p>
+        </div>
+        <div> 
+            <h3>Navigation</h3> 
+            <ul> <!-- Liste de liens de navigation -->
+                <li><a href="index.html">Accueil</a></li> <!-- Lien vers l'accueil -->
+                <li><a href="service.html">Services</a></li> <!-- Lien vers les services -->
+                <li><a href="contact.html">Contact</a></li> <!-- Lien vers la page contact -->
+            </ul> 
+        </div> 
+        <div> 
+            <h3>Suivez-nous</h3> 
+            <p><i class="fab fa-facebook"></i> Facebook</p> <!-- Lien vers Facebook (à ajouter réellement si nécessaire) -->
+            <p><i class="fab fa-linkedin"></i> LinkedIn</p> <!-- Lien vers LinkedIn (à ajouter réellement si nécessaire) -->
+            <p><i class="fab fa-youtube"></i> YouTube</p> <!-- Lien vers YouTube (à ajouter réellement si nécessaire) -->
+        </div> 
+    </div> 
+    <div class="copyright"> 
+        <p>
+            &copy; 2026 La Congolaise Des Eaux - Tous droits réservés.
+        </p> 
+    </div>
+</footer>
+
 </body>
 </html>
