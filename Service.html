@@ -1,11 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nos Services | LCDE</title> 
+    <meta name="description" content="Découvrez les services proposés par La Congolaise Des Eaux."> 
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Préconnexion à Google Fonts pour optimiser le chargement -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Préconnexion aux ressources de police avec CORS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"> <!-- Import des polices du site -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<!-- =========================
+HEADER
+========================= -->
+    <header class="header"> 
+        <div class="container navbar"> 
+            <a href="index.html" class="logo"> LC<span>DE</span></a>
+            <nav> 
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li> <!-- Lien vers la page d'accueil -->
+                    <li><a href="service.html" class="active">Services</a></li> <!-- Lien vers la page services, actif ici -->
+                </ul> 
+            </nav> 
+
+            <a href="contact.html" class="btn"> Nous contacter </a> <!-- Bouton d'appel à l'action vers le contact -->
+        </div> 
+    </header>
+
+<!-- =========================
+PAGE HERO
+========================= -->
+    <section class="page-hero">
+        <div class="container"> 
+            <span>Nos prestations</span> 
+            <h1>Nos Services</h1> 
+            <p> 
+                La LCDE met à votre disposition plusieurs services
+                afin de faciliter l'accès à l'eau potable et
+                d'assurer un accompagnement de qualité.
+            </p> 
+        </div> 
+    </section>
+
+<!-- =========================
+SERVICES
+========================= -->
+
+    <section class="services section">
+        <div class="container">
+            <div class="services-grid"> 
+
+                <!-- Service 1 -->
+
+                <article class="service-card"> 
+                    <img src="images/Pourquoi il est préférable de boire l’eau du robinet plutôt que celle en bouteille.jpeg" alt="Distribution d'eau">
+                    <div class="service-content"> 
+                        <i class="fa-solid fa-faucet-drip"></i> 
+                        <h3>Distribution d'eau potable</h3>
+                        <p> 
+                            Nous assurons une distribution continue
+                            de l'eau potable auprès des ménages,
+                            entreprises et administrations.
+                        </p>
+                        <a href="contact.html" class="btn">En savoir plus</a> 
+                    </div> 
+                </article> 
+
+                <!-- Service 2 -->
+
+                <article class="service-card"> 
+                    <img src="images/Comment équiper un collecteur avec du PER _.jpeg" alt="Branchement">
+                    <div class="service-content"> 
+                        <i class="fa-solid fa-house-circle-check"></i> 
+                        <h3>Nouveau branchement</h3>
+                        <p> 
+                            Demandez un raccordement rapide
+                            au réseau de distribution d'eau
+                            de votre localité.
+                        </p>
+
+                        <a href="contact.html" class="btn"> Faire une demande </a> <!-- Bouton pour demander un raccordement -->
+                    </div> 
+                </article> 
+
+                <!-- Service 3 -->
+
+                <article class="service-card"> 
+                    <img src="images/¿Cómo funciona Reston Water_ 1️⃣ Revisamos tu….jpeg" alt="Maintenance"> 
+                    <div class="service-content"> 
+                        <i class="fa-solid fa-screwdriver-wrench"></i> 
+                        <h3>Maintenance & Dépannage</h3> 
+                        <p> 
+                            Nos équipes interviennent pour
+                            diagnostiquer et résoudre rapidement
+                            les incidents techniques.
+                        </p>
+                        <a href="contact.html" class="btn"> Signaler un problème </a> 
+                    </div> 
+                </article> 
+
+                <!-- Service 4 -->
+
+                <article class="service-card">
+                    <img src="images/Une retraitée de 90 ans reçoit une facture d’eau de plus de 7 000 euros et refuse de la payer.jpeg" alt="Facturation"> 
+                    <div class="service-content"> 
+                        <i class="fa-solid fa-file-invoice-dollar"></i> 
+                        <h3>Facturation & Assistance</h3> 
+                        <p> 
+                            Consultez vos informations de facturation
+                            et bénéficiez d'un accompagnement
+                            personnalisé.
+                        </p>
+                        <a href="contact.html" class="btn"> Contacter un conseiller </a> 
+                    </div> 
+                </article> 
+            </div> 
+        </div> 
+    </section> 
+
+<!-- =========================
+CALL TO ACTION
+========================= -->
+    <section class="cta"> 
+        <div class="container"> 
+            <h2>
+                Besoin d'un accompagnement ?
+            </h2>
+            <p>
+                Notre équipe est disponible pour répondre à toutes
+                vos questions concernant nos services.
+            </p>
+            <a href="contact.html" class="btn">
+                Nous contacter
+            </a>
+        </div> 
+    </section> 
+
+<!-- =========================
+FOOTER
+========================= -->
+    <footer class="footer"> 
+        <div class="container footer-content"> 
+            <div> 
+                <h3>LCDE</h3> 
+                <p> 
+                    Ensemble pour une meilleure distribution
+                    de l'eau potable au Congo.
+                </p>
+            </div> 
+            <div> 
+                <h3>Navigation</h3> 
+                <ul> 
+                    <li><a href="index.html">Accueil</a></li> <!-- Lien vers la page d'accueil -->
+                    <li><a href="service.html">Services</a></li> <!-- Lien vers les services -->
+                </ul>
+            </div>
+            <div> 
+                <h3>Nos coordonnées</h3> 
+                <p><i class="fa-solid fa-phone"></i> +242 XX XX XX XX</p> <!-- Téléphone de contact -->
+                <p><i class="fa-solid fa-envelope"></i> contact@lcde.cg</p> <!-- Email de contact -->
+            </div>
+        </div> 
+        <div class="copyright">
+            <p> 
+                &copy; 2026 La Congolaise Des Eaux - Tous droits réservés.
+            </p> 
+        </div> 
+    </footer>
 </body>
-</html>
+</html> 
