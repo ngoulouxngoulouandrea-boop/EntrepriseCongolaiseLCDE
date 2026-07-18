@@ -1,0 +1,846 @@
+/*==================================================
+VARIABLES
+==================================================*/
+
+:root{
+    --primary:#0077B6; /* Couleur principale du thème. */
+    --secondary:#0096C7; /* Couleur secondaire du thème. */
+    --accent:#48CAE4; /* Couleur d’accentuation utilisée pour les éléments importants. */
+    --dark:#023047; /* Couleur de fond sombre. */
+    --text:#334155; /* Propriété de style appliquée à cet élément. */
+    --white:#ffffff; /* Couleur blanche pour le texte ou les fonds clairs. */
+    --light:#F8FAFC; /* Propriété de style appliquée à cet élément. */
+    --gray:#94A3B8; /* Couleur grise pour le texte secondaire. */
+    --border:#E2E8F0; /* Propriété de style appliquée à cet élément. */
+    --gradient:linear-gradient(
+        135deg,
+        #0077B6,
+        #00B4D8
+    );
+    --shadow:0 15px 35px rgba(0,0,0,.12); /* Style d’ombre utilisé pour donner du relief. */
+    --radius:18px; /* Rayon de bordure pour arrondir les éléments. */
+    --transition:.35s ease; /* Durée et type de transition par défaut. */
+    --max-width:1200px; /* Largeur maximale du contenu centré. */
+}
+
+/*==================================================
+RESET
+==================================================*/
+
+*{
+    margin:0; /* Espace extérieur autour de l’élément. */
+    padding:0; /* Espace intérieur autour du contenu de l’élément. */
+    box-sizing:border-box; /* Inclut la bordure et le padding dans les dimensions. */
+}
+
+html{
+
+    scroll-behavior:smooth; /* Contrôle le comportement du défilement. */
+
+}
+
+
+body{
+    font-family:"Inter",sans-serif; /* Police utilisée pour afficher le texte. */
+    color:var(--text); /* Couleur du texte. */
+    background:var(--white); /* Couleur ou image de fond de l’élément. */
+    line-height:1.7; /* Hauteur de ligne du texte pour la lisibilité. */
+}
+
+img{
+    width:100%; /* Largeur de l’élément. */
+    display:block; /* Type d’affichage de l’élément. */
+}
+
+a{
+    color:inherit; /* Couleur du texte. */
+    text-decoration:none; /* Décoration du texte (souligné, barré, etc.). */
+}
+
+ul{
+    list-style:none; /* Propriété de style appliquée à cet élément. */
+}
+
+button,
+input,
+textarea{
+    font-family:inherit; /* Police utilisée pour afficher le texte. */
+}
+
+/*==================================================
+UTILITAIRES
+==================================================*/
+
+.container{
+    width:min(90%,var(--max-width)); /* Largeur de l’élément. */
+    margin:auto; /* Espace extérieur autour de l’élément. */
+}
+
+.section{
+    padding:100px 0; /* Espace intérieur autour du contenu de l’élément. */
+}
+
+.section-title{
+    text-align:center; /* Alignement horizontal du texte. */
+    margin-bottom:70px; /* Espace extérieur en bas de l’élément. */
+}
+
+.section-title span{
+    color:var(--primary); /* Couleur du texte. */
+    font-weight:600; /* Épaisseur du texte. */
+    text-transform:uppercase; /* Propriété de style appliquée à cet élément. */
+    letter-spacing:2px; /* Espacement entre les caractères du texte. */
+}
+
+.section-title h2{
+    margin-top:12px; /* Espace extérieur en haut de l’élément. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+    font-size:2.5rem; /* Taille du texte. */
+    color:var(--dark); /* Couleur du texte. */
+}
+
+/*==================================================
+BOUTONS
+==================================================*/
+
+.btn{
+    display:inline-block; /* Type d’affichage de l’élément. */
+    padding:15px 35px; /* Espace intérieur autour du contenu de l’élément. */
+    border-radius:50px; /* Arrondi des coins de l’élément. */
+    background:var(--gradient); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+    font-weight:600; /* Épaisseur du texte. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+    box-shadow:var(--shadow); /* Effet d’ombre pour donner du relief. */
+}
+
+.btn:hover{
+    transform:translateY(-5px); /* Transformation visuelle de l’élément. */
+}
+
+.btn-outline{
+    display:inline-block; /* Type d’affichage de l’élément. */
+    padding:15px 35px; /* Espace intérieur autour du contenu de l’élément. */
+    border-radius:50px; /* Arrondi des coins de l’élément. */
+    border:2px solid var(--primary); /* Bordure autour de l’élément. */
+    color:var(--primary); /* Couleur du texte. */
+    margin-left:15px; /* Espace extérieur à gauche de l’élément. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+}
+
+.btn-outline:hover{
+    background:var(--primary); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.header{
+    position:fixed; /* Mode de positionnement de l’élément. */
+    top:0; /* Position verticale de l’élément. */
+    left:0; /* Position horizontale à gauche. */
+    width:100%; /* Largeur de l’élément. */
+    background:rgba(255,255,255,.95); /* Couleur ou image de fond de l’élément. */
+    backdrop-filter:blur(12px); /* Propriété de style appliquée à cet élément. */
+    z-index:999; /* Ordre d’empilement des éléments positionnés. */
+    border-bottom:1px solid rgba(0,0,0,.05); /* Propriété de style appliquée à cet élément. */
+}
+
+.navbar{
+    display:flex; /* Type d’affichage de l’élément. */
+    justify-content:space-between; /* Alignement horizontal dans un conteneur flex ou grille. */
+    align-items:center; /* Alignement vertical dans un conteneur flex. */
+    height:85px; /* Hauteur de l’élément. */
+}
+
+
+.logo{
+    font-size:2rem; /* Taille du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+    font-weight:700; /* Épaisseur du texte. */
+    color:var(--dark); /* Couleur du texte. */
+}
+
+.logo span{
+    color:var(--primary); /* Couleur du texte. */
+}
+
+nav ul{
+    display:flex; /* Type d’affichage de l’élément. */
+    gap:35px; /* Espacement entre les éléments d’une grille ou flex. */
+}
+
+nav a{
+    font-weight:500; /* Épaisseur du texte. */
+    position:relative; /* Mode de positionnement de l’élément. */
+}
+
+nav a::after{
+    content:""; /* Contenu généré par un pseudo-élément. */
+    position:absolute; /* Mode de positionnement de l’élément. */
+    left:0; /* Position horizontale à gauche. */
+    bottom:-6px; /* Position verticale en bas. */
+    width:0; /* Largeur de l’élément. */
+    height:2px; /* Hauteur de l’élément. */
+    background:var(--primary); /* Couleur ou image de fond de l’élément. */
+    transition:.3s; /* Transition fluide entre deux états de style. */
+}
+
+nav a:hover::after,
+nav a.active::after{
+    width:100%; /* Largeur de l’élément. */
+
+}
+
+/*==================================================
+HERO
+==================================================*/
+
+.hero{
+    padding-top:150px; /* Espace intérieur en haut du contenu. */
+    padding-bottom:100px; /* Espace intérieur en bas du contenu. */
+    background:
+    linear-gradient(
+        rgba(0,119,182,.08),
+        rgba(255,255,255,.95)
+    );
+}
+
+.hero-content{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:repeat(2,1fr); /* Disposition des colonnes dans une grille. */
+    gap:70px; /* Espacement entre les éléments d’une grille ou flex. */
+    align-items:center; /* Alignement vertical dans un conteneur flex. */
+}
+
+.hero-text span{
+    color:var(--primary); /* Couleur du texte. */
+    font-weight:600; /* Épaisseur du texte. */
+}
+
+.hero-text h1{
+    margin:20px 0; /* Espace extérieur autour de l’élément. */
+    font-size:4rem; /* Taille du texte. */
+    line-height:1.1; /* Hauteur de ligne du texte pour la lisibilité. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+    color:var(--dark); /* Couleur du texte. */
+}
+
+.hero-text h2{
+    font-size:1.6rem; /* Taille du texte. */
+    color:#475569; /* Couleur du texte. */
+    margin-bottom:25px; /* Espace extérieur en bas de l’élément. */
+}
+
+
+.hero-text p{
+    color:#64748B; /* Couleur du texte. */
+    margin-bottom:35px; /* Espace extérieur en bas de l’élément. */
+}
+
+.hero-buttons{
+    display:flex; /* Type d’affichage de l’élément. */
+    gap:20px; /* Espacement entre les éléments d’une grille ou flex. */
+    flex-wrap:wrap; /* Propriété de style appliquée à cet élément. */
+}
+
+.hero-image{
+    position:relative; /* Mode de positionnement de l’élément. */
+}
+
+.hero-image img{
+    border-radius:25px; /* Arrondi des coins de l’élément. */
+    box-shadow:var(--shadow); /* Effet d’ombre pour donner du relief. */
+}
+
+/*==================================================
+PAGE HERO
+==================================================*/
+
+
+.page-hero{
+    padding:170px 0 90px; /* Espace intérieur autour du contenu de l’élément. */
+    text-align:center; /* Alignement horizontal du texte. */
+    background:
+    linear-gradient(
+        rgba(0,119,182,.08),
+        rgba(255,255,255,.98)
+    );
+}
+
+.page-hero span{
+    color:var(--primary); /* Couleur du texte. */
+    text-transform:uppercase; /* Propriété de style appliquée à cet élément. */
+    font-weight:600; /* Épaisseur du texte. */
+}
+
+.page-hero h1{
+    font-size:3rem; /* Taille du texte. */
+    margin:15px 0; /* Espace extérieur autour de l’élément. */
+    color:var(--dark); /* Couleur du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.page-hero p{
+    max-width:700px; /* Largeur maximale de l’élément. */
+    margin:auto; /* Espace extérieur autour de l’élément. */
+    color:#64748B; /* Couleur du texte. */
+}
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+.hero,
+.page-hero{
+    animation:fadeIn .9s ease; /* Animation appliquée sur l’élément. */
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0; /* Degré de transparence de l’élément. */
+        transform:translateY(40px); /* Transformation visuelle de l’élément. */
+    }
+
+    to{
+        opacity:1; /* Degré de transparence de l’élément. */
+        transform:translateY(0); /* Transformation visuelle de l’élément. */
+    }
+}
+
+/*==================================================
+ABOUT
+==================================================*/
+
+.about{
+    background:var(--white); /* Couleur ou image de fond de l’élément. */
+}
+
+.about-content{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:2fr 1fr; /* Disposition des colonnes dans une grille. */
+    gap:50px; /* Espacement entre les éléments d’une grille ou flex. */
+    align-items:center; /* Alignement vertical dans un conteneur flex. */
+}
+
+.about-content p{
+    color:#64748B; /* Couleur du texte. */
+    margin-bottom:20px; /* Espace extérieur en bas de l’élément. */
+    text-align:justify; /* Alignement horizontal du texte. */
+}
+
+.about-card{
+    background:var(--gradient); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+    padding:40px; /* Espace intérieur autour du contenu de l’élément. */
+    border-radius:var(--radius); /* Arrondi des coins de l’élément. */
+    text-align:center; /* Alignement horizontal du texte. */
+    box-shadow:var(--shadow); /* Effet d’ombre pour donner du relief. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+}
+
+
+.about-card:hover{
+    transform:translateY(-10px); /* Transformation visuelle de l’élément. */
+}
+
+.about-card i{
+    font-size:4rem; /* Taille du texte. */
+    margin-bottom:20px; /* Espace extérieur en bas de l’élément. */
+}
+
+.about-card h3{
+    margin-bottom:15px; /* Espace extérieur en bas de l’élément. */
+    font-size:1.5rem; /* Taille du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+/*==================================================
+MISSIONS
+==================================================*/
+
+.missions{
+    background:#F8FAFC; /* Couleur ou image de fond de l’élément. */
+}
+
+.cards{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:repeat(3,1fr); /* Disposition des colonnes dans une grille. */
+    gap:35px; /* Espacement entre les éléments d’une grille ou flex. */
+}
+
+.card{
+    background:white; /* Couleur ou image de fond de l’élément. */
+    padding:40px 30px; /* Espace intérieur autour du contenu de l’élément. */
+    border-radius:20px; /* Arrondi des coins de l’élément. */
+    text-align:center; /* Alignement horizontal du texte. */
+    box-shadow:0 10px 25px rgba(0,0,0,.08); /* Effet d’ombre pour donner du relief. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+}
+
+.card:hover{
+    transform:translateY(-12px); /* Transformation visuelle de l’élément. */
+}
+
+.card i{
+    width:90px; /* Largeur de l’élément. */
+    height:90px; /* Hauteur de l’élément. */
+    border-radius:50%; /* Arrondi des coins de l’élément. */
+    background:var(--gradient); /* Couleur ou image de fond de l’élément. */
+    display:flex; /* Type d’affichage de l’élément. */
+    justify-content:center; /* Alignement horizontal dans un conteneur flex ou grille. */
+    align-items:center; /* Alignement vertical dans un conteneur flex. */
+    color:white; /* Couleur du texte. */
+    font-size:2rem; /* Taille du texte. */
+    margin:auto; /* Espace extérieur autour de l’élément. */
+    margin-bottom:25px; /* Espace extérieur en bas de l’élément. */
+}
+
+.card h3{
+    margin-bottom:15px; /* Espace extérieur en bas de l’élément. */
+    color:var(--dark); /* Couleur du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.card p{
+    color:#64748B; /* Couleur du texte. */
+}
+
+/*==================================================
+STATISTIQUES
+==================================================*/
+
+.stats{
+    background:var(--gradient); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+    padding:80px 0; /* Espace intérieur autour du contenu de l’élément. */
+}
+
+.stats-grid{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:repeat(3,1fr); /* Disposition des colonnes dans une grille. */
+    gap:40px; /* Espacement entre les éléments d’une grille ou flex. */
+    text-align:center; /* Alignement horizontal du texte. */
+}
+
+.stats-grid h3{
+    font-size:3rem; /* Taille du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.stats-grid p{
+    font-size:1rem; /* Taille du texte. */
+    opacity:.9; /* Degré de transparence de l’élément. */
+}
+
+/*==================================================
+SERVICES
+==================================================*/
+
+.services{
+    background:var(--white); /* Couleur ou image de fond de l’élément. */
+}
+
+.services-grid{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:repeat(2,1fr); /* Disposition des colonnes dans une grille. */
+    gap:35px; /* Espacement entre les éléments d’une grille ou flex. */
+}
+
+
+.service-card{
+    overflow:hidden; /* Contrôle du débordement du contenu. */
+    border-radius:22px; /* Arrondi des coins de l’élément. */
+    background:white; /* Couleur ou image de fond de l’élément. */
+    box-shadow:0 15px 30px rgba(0,0,0,.08); /* Effet d’ombre pour donner du relief. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+}
+
+
+.service-card:hover{
+    transform:translateY(-10px); /* Transformation visuelle de l’élément. */
+}
+
+.service-card img{
+    height:230px; /* Hauteur de l’élément. */
+    object-fit:cover; /* Comment l’image s’adapte à son conteneur. */
+    transition:.5s; /* Transition fluide entre deux états de style. */g
+}
+
+.service-card:hover img{
+    transform:scale(1.08); /* Transformation visuelle de l’élément. */
+}
+
+.service-content{
+    padding:35px; /* Espace intérieur autour du contenu de l’élément. */
+}
+
+.service-content i{
+    color:var(--primary); /* Couleur du texte. */
+    font-size:2rem; /* Taille du texte. */
+    margin-bottom:20px; /* Espace extérieur en bas de l’élément. */
+}
+
+.service-content h3{
+    margin-bottom:15px; /* Espace extérieur en bas de l’élément. */
+    color:var(--dark); /* Couleur du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.service-content p{
+    color:#64748B; /* Couleur du texte. */
+    margin-bottom:25px; /* Espace extérieur en bas de l’élément. */
+}
+
+/*==================================================
+CALL TO ACTION
+==================================================*/
+
+.cta{
+    background:var(--gradient); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+    text-align:center; /* Alignement horizontal du texte. */
+    padding:90px 0; /* Espace intérieur autour du contenu de l’élément. */
+}
+
+.cta h2{
+    font-size:2.6rem; /* Taille du texte. */
+    margin-bottom:20px; /* Espace extérieur en bas de l’élément. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.cta p{
+    max-width:700px; /* Largeur maximale de l’élément. */
+    margin:0 auto 35px; /* Espace extérieur autour de l’élément. */
+    opacity:.95; /* Degré de transparence de l’élément. */
+}
+
+.cta .btn{
+    background:white; /* Couleur ou image de fond de l’élément. */
+    color:var(--primary); /* Couleur du texte. */
+}
+
+.cta .btn:hover{
+    transform:translateY(-6px); /* Transformation visuelle de l’élément. */
+}
+
+/*==================================================
+HOVER EFFECT
+==================================================*/
+
+.card,
+.service-card,
+.about-card{
+    cursor:pointer; /* Propriété de style appliquée à cet élément. */
+}
+
+/*==================================================
+CONTACT
+==================================================*/
+
+
+.contact{
+    background:var(--light); /* Couleur ou image de fond de l’élément. */
+}
+
+.contact-grid{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:2fr 1fr; /* Disposition des colonnes dans une grille. */
+    gap:40px; /* Espacement entre les éléments d’une grille ou flex. */
+    align-items:start; /* Alignement vertical dans un conteneur flex. */
+}
+
+.contact-form{
+    background:var(--white); /* Couleur ou image de fond de l’élément. */
+    padding:40px; /* Espace intérieur autour du contenu de l’élément. */
+    border-radius:20px; /* Arrondi des coins de l’élément. */
+    box-shadow:var(--shadow); /* Effet d’ombre pour donner du relief. */
+}
+
+.contact-form h2{
+    margin-bottom:30px; /* Espace extérieur en bas de l’élément. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+    color:var(--dark); /* Couleur du texte. */
+}
+
+.contact-form form{
+    display:flex; /* Type d’affichage de l’élément. */
+    flex-direction:column; /* Propriété de style appliquée à cet élément. */
+    gap:20px; /* Espacement entre les éléments d’une grille ou flex. */
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%; /* Largeur de l’élément. */
+    padding:16px 20px; /* Espace intérieur autour du contenu de l’élément. */
+    border:1px solid var(--border); /* Bordure autour de l’élément. */
+    border-radius:12px; /* Arrondi des coins de l’élément. */
+    outline:none; /* Contour externe pour focus ou mise en évidence. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+    font-size:1rem; /* Taille du texte. */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:var(--primary); /* Propriété de style appliquée à cet élément. */
+    box-shadow:0 0 0 4px rgba(0,119,182,.12); /* Effet d’ombre pour donner du relief. */
+}
+
+.contact-form textarea{
+    resize:vertical; /* Propriété de style appliquée à cet élément. */
+}
+
+/*==================================================
+CONTACT INFO
+==================================================*/
+
+.contact-info{
+    display:flex; /* Type d’affichage de l’élément. */
+    flex-direction:column; /* Propriété de style appliquée à cet élément. */
+    gap:20px; /* Espacement entre les éléments d’une grille ou flex. */
+}
+
+
+.info-box{
+    background:var(--white); /* Couleur ou image de fond de l’élément. */
+    padding:30px; /* Espace intérieur autour du contenu de l’élément. */
+    border-radius:20px; /* Arrondi des coins de l’élément. */
+    box-shadow:var(--shadow); /* Effet d’ombre pour donner du relief. */
+    text-align:center; /* Alignement horizontal du texte. */
+    transition:var(--transition); /* Transition fluide entre deux états de style. */
+
+}
+
+.info-box:hover{
+    transform:translateY(-8px); /* Transformation visuelle de l’élément. */
+}
+
+
+.info-box i{
+    width:70px; /* Largeur de l’élément. */
+    height:70px; /* Hauteur de l’élément. */
+    margin:auto; /* Espace extérieur autour de l’élément. */
+    margin-bottom:20px; /* Espace extérieur en bas de l’élément. */
+    border-radius:50%; /* Arrondi des coins de l’élément. */
+    display:flex; /* Type d’affichage de l’élément. */
+    justify-content:center; /* Alignement horizontal dans un conteneur flex ou grille. */
+    align-items:center; /* Alignement vertical dans un conteneur flex. */
+    background:var(--gradient); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+    font-size:1.8rem; /* Taille du texte. */
+}
+
+
+.info-box h3{
+    margin-bottom:10px; /* Espace extérieur en bas de l’élément. */
+    color:var(--dark); /* Couleur du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.info-box p{
+    color:#64748B; /* Couleur du texte. */
+}
+
+/*==================================================
+MAP
+==================================================*/
+
+
+.map{
+    background:white; /* Couleur ou image de fond de l’élément. */
+}
+
+.map-placeholder{
+    border-radius:20px; /* Arrondi des coins de l’élément. */
+    background:#eef8fd; /* Couleur ou image de fond de l’élément. */
+    padding:80px 30px; /* Espace intérieur autour du contenu de l’élément. */
+    text-align:center; /* Alignement horizontal du texte. */
+    border:2px dashed var(--accent); /* Bordure autour de l’élément. */
+}
+
+.map-placeholder i{
+    font-size:4rem; /* Taille du texte. */
+    color:var(--primary); /* Couleur du texte. */
+    margin-bottom:25px; /* Espace extérieur en bas de l’élément. */
+}
+
+.map-placeholder h3{
+    margin-bottom:15px; /* Espace extérieur en bas de l’élément. */
+    color:var(--dark); /* Couleur du texte. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.map-placeholder p{
+    color:#64748B; /* Couleur du texte. */
+}
+
+/*==================================================
+FOOTER
+==================================================*/
+
+.footer{
+    background:var(--dark); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+    padding:70px 0 25px; /* Espace intérieur autour du contenu de l’élément. */
+}
+
+.footer-content{
+    display:grid; /* Type d’affichage de l’élément. */
+    grid-template-columns:repeat(3,1fr); /* Disposition des colonnes dans une grille. */
+    gap:40px; /* Espacement entre les éléments d’une grille ou flex. */
+    margin-bottom:40px; /* Espace extérieur en bas de l’élément. */
+}
+
+.footer h3{
+    margin-bottom:20px; /* Espace extérieur en bas de l’élément. */
+    font-family:"Poppins",sans-serif; /* Police utilisée pour afficher le texte. */
+}
+
+.footer p,
+.footer li{
+    color:#cbd5e1; /* Couleur du texte. */
+    margin-bottom:10px; /* Espace extérieur en bas de l’élément. */
+}
+
+.footer ul{
+    padding:0; /* Espace intérieur autour du contenu de l’élément. */
+}
+
+.footer a{
+    transition:.3s; /* Transition fluide entre deux états de style. */
+}
+
+.footer a:hover{
+    color:var(--accent); /* Couleur du texte. */
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.15); /* Propriété de style appliquée à cet élément. */
+    padding-top:20px; /* Espace intérieur en haut du contenu. */
+    text-align:center; /* Alignement horizontal du texte. */
+    color:#cbd5e1; /* Couleur du texte. */
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+    .hero-content,
+    .about-content,
+    .contact-grid{
+        grid-template-columns:1fr; /* Disposition des colonnes dans une grille. */
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr); /* Disposition des colonnes dans une grille. */
+    }
+
+    .services-grid{
+        grid-template-columns:1fr; /* Disposition des colonnes dans une grille. */
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(3,1fr); /* Disposition des colonnes dans une grille. */
+    }
+
+    .footer-content{
+        grid-template-columns:1fr; /* Disposition des colonnes dans une grille. */
+        text-align:center; /* Alignement horizontal du texte. */
+    }
+}
+
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column; /* Propriété de style appliquée à cet élément. */
+        height:auto; /* Hauteur de l’élément. */
+        padding:20px 0; /* Espace intérieur autour du contenu de l’élément. */
+        gap:20px; /* Espacement entre les éléments d’une grille ou flex. */
+    }
+
+    nav ul{
+        flex-direction:column; /* Propriété de style appliquée à cet élément. */
+        align-items:center; /* Alignement vertical dans un conteneur flex. */
+        gap:15px; /* Espacement entre les éléments d’une grille ou flex. */
+    }
+
+    .hero{
+        padding-top:180px; /* Espace intérieur en haut du contenu. */
+        text-align:center; /* Alignement horizontal du texte. */
+    }
+
+    .hero h1{
+        font-size:2.6rem; /* Taille du texte. */
+    }
+
+    .hero-buttons{
+        justify-content:center; /* Alignement horizontal dans un conteneur flex ou grille. */
+    }
+
+    .section{
+        padding:70px 0; /* Espace intérieur autour du contenu de l’élément. */
+    }
+
+    .section-title h2{
+        font-size:2rem; /* Taille du texte. */
+    }
+
+    .cards{
+        grid-template-columns:1fr; /* Disposition des colonnes dans une grille. */
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr; /* Disposition des colonnes dans une grille. */
+        gap:30px; /* Espacement entre les éléments d’une grille */
+    }
+
+    .footer-content{
+        gap:30px; /* Espacement entre les éléments d’une grille. */
+
+    }
+
+}
+
+/*==================================================
+ACCESSIBILITE
+==================================================*/
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus{
+    outline:3px solid var(--accent); /* Contour externe pour focus ou mise en évidence. */
+    outline-offset:3px; /* Propriété de style appliquée à cet élément. */
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+    width:10px; /* Largeur de l’élément. */
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb; /* Couleur ou image de fond de l’élément. */
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary); /* Couleur ou image de fond de l’élément. */
+    border-radius:10px; /* Arrondi des coins de l’élément. */
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--secondary); /* Couleur ou image de fond de l’élément. */
+}
+
+/*==================================================
+SELECTION
+==================================================*/
+
+::selection{
+    background:var(--primary); /* Couleur ou image de fond de l’élément. */
+    color:white; /* Couleur du texte. */
+}
